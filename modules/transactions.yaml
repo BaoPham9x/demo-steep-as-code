@@ -8,6 +8,12 @@ module:
     - column: "currency"
       type: "categorical"
   metrics:
+    - identifier: "transaction_amount_2"
+      name: "Transaction amount 2"
+      time: "transactions.created_at"
+      description: "abc"
+      calculation: "sum"
+      value: "transactions.amount"
     - identifier: "transactions_2"
       name: "Transactions"
       time: "transactions.created_at"
