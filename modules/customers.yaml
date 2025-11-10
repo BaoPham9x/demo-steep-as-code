@@ -1,0 +1,14 @@
+module:
+  identifier: "customers"
+  schema: "steep_demo_fintech"
+  table: "customers"
+  dimensions:
+    - column: "email"
+      type: "categorical"
+    - column: "country"
+      type: "categorical"
+  metrics:
+    - identifier: "registration"
+      name: "Registration"
+      time: "customers.created_at"
+      calculation: "count"
