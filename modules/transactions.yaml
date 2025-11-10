@@ -1,0 +1,27 @@
+module:
+  identifier: "transactions"
+  schema: "steep_demo_fintech"
+  table: "transactions"
+  dimensions:
+    - column: "country"
+      type: "categorical"
+    - column: "currency"
+      type: "categorical"
+  metrics:
+    - identifier: "transactions_2"
+      name: "Transactions"
+      time: "transactions.created_at"
+      description: "Transactions"
+      calculation: "count"
+      owner_emails:
+        - "bao@steep.app"
+      category: "Commercial"
+    - identifier: "transactions"
+      name: "Transactions amount"
+      time: "transactions.created_at"
+      description: "Transaction amount"
+      calculation: "sum"
+      value: "transactions.amount"
+      owner_emails:
+        - "bao@steep.app"
+      category: "Commercial"
